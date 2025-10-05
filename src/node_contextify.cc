@@ -112,7 +112,7 @@ namespace {
 
 // Convert an int to a V8 Name (String or Symbol).
 MaybeLocal<String> Uint32ToName(Local<Context> context, uint32_t index) {
-  return Uint32::New(context->GetIsolate(), index)->ToString(context);
+  return Uint32::New(Isolate::GetCurrent(), index)->ToString(context);
 }
 
 }  // anonymous namespace
@@ -284,10 +284,10 @@ ContextifyContext* ContextifyContext::New(Local<Context> v8_context,
                               options->allow_code_gen_wasm);
 
   Utf8Value name_val(env->isolate(), options->name);
-  ContextInfo info(*name_val);
+  ContextInfo info(name_val.ToString());
   if (!options->origin.IsEmpty()) {
     Utf8Value origin_val(env->isolate(), options->origin);
-    info.origin = *origin_val;
+    info.origin = origin_val.ToString();
   }
 
   ContextifyContext* result;
@@ -676,7 +676,7 @@ Intercepted ContextifyContext::PropertyDefinerCallback(
   }
 
   Local<Context> context = ctx->context();
-  Isolate* isolate = context->GetIsolate();
+  Isolate* isolate = Isolate::GetCurrent();
 
   PropertyAttribute attributes = PropertyAttribute::None;
   bool is_declared =
@@ -1296,24 +1296,17 @@ bool ContextifyScript::EvalMachine(Local<Context> context,
   MaybeLocal<Value> result;
   bool timed_out = false;
   bool received_signal = false;
-  auto run = [&]() {
-    MaybeLocal<Value> result = script->Run(context);
+  {
+    auto wd = timeout != -1 ? std::make_optional<Watchdog>(
+                                  env->isolate(), timeout, &timed_out)
+                            : std::nullopt;
+    auto swd = break_on_sigint ? std::make_optional<SigintWatchdog>(
+                                     env->isolate(), &received_signal)
+                               : std::nullopt;
+
+    result = script->Run(context);
     if (!result.IsEmpty() && mtask_queue != nullptr)
       mtask_queue->PerformCheckpoint(env->isolate());
-    return result;
-  };
-  if (break_on_sigint && timeout != -1) {
-    Watchdog wd(env->isolate(), timeout, &timed_out);
-    SigintWatchdog swd(env->isolate(), &received_signal);
-    result = run();
-  } else if (break_on_sigint) {
-    SigintWatchdog swd(env->isolate(), &received_signal);
-    result = run();
-  } else if (timeout != -1) {
-    Watchdog wd(env->isolate(), timeout, &timed_out);
-    result = run();
-  } else {
-    result = run();
   }
 
   // Convert the termination exception into a regular exception.
@@ -1663,7 +1656,7 @@ static MaybeLocal<Function> CompileFunctionForCJSLoader(
     bool* cache_rejected,
     bool is_cjs_scope,
     ScriptCompiler::CachedData* cached_data) {
-  Isolate* isolate = context->GetIsolate();
+  Isolate* isolate = Isolate::GetCurrent();
   EscapableHandleScope scope(isolate);
 
   Local<Symbol> symbol = env->vm_dynamic_import_default_internal();

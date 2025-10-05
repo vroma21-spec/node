@@ -77,22 +77,18 @@
   V(allow_unknown_named_params_string, "allowUnknownNamedParameters")          \
   V(alpn_callback_string, "ALPNCallback")                                      \
   V(args_string, "args")                                                       \
-  V(asn1curve_string, "asn1Curve")                                             \
   V(async_ids_stack_string, "async_ids_stack")                                 \
   V(attributes_string, "attributes")                                           \
   V(backup_string, "backup")                                                   \
   V(base_string, "base")                                                       \
   V(base_url_string, "baseURL")                                                \
-  V(bits_string, "bits")                                                       \
   V(buffer_string, "buffer")                                                   \
   V(bytes_parsed_string, "bytesParsed")                                        \
   V(bytes_read_string, "bytesRead")                                            \
   V(bytes_written_string, "bytesWritten")                                      \
-  V(ca_string, "ca")                                                           \
   V(cached_data_produced_string, "cachedDataProduced")                         \
   V(cached_data_rejected_string, "cachedDataRejected")                         \
   V(cached_data_string, "cachedData")                                          \
-  V(cert_usage_string, "certUsage")                                            \
   V(change_string, "change")                                                   \
   V(changes_string, "changes")                                                 \
   V(chunks_sent_since_last_write_string, "chunksSentSinceLastWrite")           \
@@ -145,7 +141,6 @@
   V(dns_a_string, "A")                                                         \
   V(dns_aaaa_string, "AAAA")                                                   \
   V(dns_caa_string, "CAA")                                                     \
-  V(dns_critical_string, "critical")                                           \
   V(dns_cname_string, "CNAME")                                                 \
   V(dns_mx_string, "MX")                                                       \
   V(dns_naptr_string, "NAPTR")                                                 \
@@ -161,7 +156,6 @@
   V(emit_string, "emit")                                                       \
   V(emit_warning_string, "emitWarning")                                        \
   V(encoding_string, "encoding")                                               \
-  V(entries_string, "entries")                                                 \
   V(env_pairs_string, "envPairs")                                              \
   V(env_var_settings_string, "envVarSettings")                                 \
   V(err_sqlite_error_string, "ERR_SQLITE_ERROR")                               \
@@ -171,11 +165,8 @@
   V(errstr_string, "errstr")                                                   \
   V(events_waiting, "eventsWaiting")                                           \
   V(events, "events")                                                          \
-  V(exchange_string, "exchange")                                               \
-  V(expire_string, "expire")                                                   \
   V(exponent_string, "exponent")                                               \
   V(exports_string, "exports")                                                 \
-  V(ext_key_usage_string, "ext_key_usage")                                     \
   V(external_stream_string, "_externalStream")                                 \
   V(family_string, "family")                                                   \
   V(fatal_exception_string, "_fatalException")                                 \
@@ -184,9 +175,6 @@
   V(file_string, "file")                                                       \
   V(filename_string, "filename")                                               \
   V(filter_string, "filter")                                                   \
-  V(fingerprint256_string, "fingerprint256")                                   \
-  V(fingerprint512_string, "fingerprint512")                                   \
-  V(fingerprint_string, "fingerprint")                                         \
   V(flags_string, "flags")                                                     \
   V(flowlabel_string, "flowlabel")                                             \
   V(frames_received_string, "framesReceived")                                  \
@@ -207,7 +195,6 @@
   V(help_text_string, "helpText")                                              \
   V(homedir_string, "homedir")                                                 \
   V(host_string, "host")                                                       \
-  V(hostmaster_string, "hostmaster")                                           \
   V(hostname_string, "hostname")                                               \
   V(href_string, "href")                                                       \
   V(http_1_1_string, "http/1.1")                                               \
@@ -215,14 +202,12 @@
   V(identity_string, "identity")                                               \
   V(ignore_case_string, "ignoreCase")                                          \
   V(ignore_string, "ignore")                                                   \
-  V(infoaccess_string, "infoAccess")                                           \
   V(inherit_string, "inherit")                                                 \
   V(input_string, "input")                                                     \
   V(inverse_string, "inverse")                                                 \
   V(ipv4_string, "IPv4")                                                       \
   V(ipv6_string, "IPv6")                                                       \
   V(isclosing_string, "isClosing")                                             \
-  V(issuer_string, "issuer")                                                   \
   V(issuercert_string, "issuerCertificate")                                    \
   V(iterator_string, "Iterator")                                               \
   V(jwk_akp_string, "AKP")                                                     \
@@ -231,10 +216,8 @@
   V(jwk_d_string, "d")                                                         \
   V(jwk_dp_string, "dp")                                                       \
   V(jwk_dq_string, "dq")                                                       \
-  V(jwk_dsa_string, "DSA")                                                     \
   V(jwk_e_string, "e")                                                         \
   V(jwk_ec_string, "EC")                                                       \
-  V(jwk_g_string, "g")                                                         \
   V(jwk_k_string, "k")                                                         \
   V(jwk_kty_string, "kty")                                                     \
   V(jwk_n_string, "n")                                                         \
@@ -254,8 +237,6 @@
   V(length_string, "length")                                                   \
   V(library_string, "library")                                                 \
   V(loop_count, "loopCount")                                                   \
-  V(mac_string, "mac")                                                         \
-  V(match_string, "match")                                                     \
   V(max_buffer_string, "maxBuffer")                                            \
   V(max_concurrent_streams_string, "maxConcurrentStreams")                     \
   V(message_port_constructor_string, "MessagePort")                            \
@@ -263,17 +244,13 @@
   V(message_string, "message")                                                 \
   V(messageerror_string, "messageerror")                                       \
   V(mgf1_hash_algorithm_string, "mgf1HashAlgorithm")                           \
-  V(minttl_string, "minttl")                                                   \
   V(mode_string, "mode")                                                       \
   V(module_string, "module")                                                   \
-  V(modulus_string, "modulus")                                                 \
   V(modulus_length_string, "modulusLength")                                    \
   V(name_string, "name")                                                       \
   V(named_curve_string, "namedCurve")                                          \
   V(next_string, "next")                                                       \
-  V(nistcurve_string, "nistCurve")                                             \
   V(node_string, "node")                                                       \
-  V(nsname_string, "nsname")                                                   \
   V(object_string, "Object")                                                   \
   V(ocsp_request_string, "OCSPRequest")                                        \
   V(oncertcb_string, "oncertcb")                                               \
@@ -300,7 +277,6 @@
   V(ongracefulclosecomplete_string, "ongracefulclosecomplete")                 \
   V(openssl_error_stack, "opensslErrorStack")                                  \
   V(options_string, "options")                                                 \
-  V(order_string, "order")                                                     \
   V(original_string, "original")                                               \
   V(output_string, "output")                                                   \
   V(overlapped_string, "overlapped")                                           \
@@ -320,28 +296,21 @@
   V(port1_string, "port1")                                                     \
   V(port2_string, "port2")                                                     \
   V(port_string, "port")                                                       \
-  V(preference_string, "preference")                                           \
   V(primordials_string, "primordials")                                         \
-  V(priority_string, "priority")                                               \
   V(process_string, "process")                                                 \
   V(progress_string, "progress")                                               \
   V(promise_string, "promise")                                                 \
   V(protocol_string, "protocol")                                               \
   V(prototype_string, "prototype")                                             \
   V(psk_string, "psk")                                                         \
-  V(pubkey_string, "pubkey")                                                   \
   V(public_exponent_string, "publicExponent")                                  \
   V(rate_string, "rate")                                                       \
-  V(raw_string, "raw")                                                         \
   V(read_host_object_string, "_readHostObject")                                \
   V(readable_string, "readable")                                               \
   V(read_bigints_string, "readBigInts")                                        \
   V(reason_string, "reason")                                                   \
-  V(refresh_string, "refresh")                                                 \
-  V(regexp_string, "regexp")                                                   \
   V(remaining_pages_string, "remainingPages")                                  \
   V(rename_string, "rename")                                                   \
-  V(replacement_string, "replacement")                                         \
   V(required_module_facade_url_string,                                         \
     "node:internal/require_module_default_facade")                             \
   V(required_module_facade_source_string,                                      \
@@ -350,15 +319,10 @@
   V(require_string, "require")                                                 \
   V(resource_string, "resource")                                               \
   V(result_string, "result")                                                   \
-  V(retry_string, "retry")                                                     \
   V(return_arrays_string, "returnArrays")                                      \
   V(salt_length_string, "saltLength")                                          \
   V(search_string, "search")                                                   \
-  V(selector_string, "selector")                                               \
-  V(serial_number_string, "serialNumber")                                      \
-  V(serial_string, "serial")                                                   \
   V(servername_string, "servername")                                           \
-  V(service_string, "service")                                                 \
   V(session_id_string, "sessionId")                                            \
   V(set_string, "set")                                                         \
   V(shell_string, "shell")                                                     \
@@ -372,7 +336,6 @@
   V(source_url_string, "sourceURL")                                            \
   V(specifier_string, "specifier")                                             \
   V(stack_string, "stack")                                                     \
-  V(standard_name_string, "standardName")                                      \
   V(start_string, "start")                                                     \
   V(state_string, "state")                                                     \
   V(stats_string, "stats")                                                     \
@@ -381,8 +344,6 @@
   V(step_string, "step")                                                       \
   V(stream_average_duration_string, "streamAverageDuration")                   \
   V(stream_count_string, "streamCount")                                        \
-  V(subject_string, "subject")                                                 \
-  V(subjectaltname_string, "subjectaltname")                                   \
   V(synthetic_string, "synthetic")                                             \
   V(syscall_string, "syscall")                                                 \
   V(table_string, "table")                                                     \
@@ -405,12 +366,9 @@
   V(unknown_string, "<unknown>")                                               \
   V(url_string, "url")                                                         \
   V(username_string, "username")                                               \
-  V(valid_from_string, "valid_from")                                           \
-  V(valid_to_string, "valid_to")                                               \
   V(value_string, "value")                                                     \
   V(verify_error_string, "verifyError")                                        \
   V(version_string, "version")                                                 \
-  V(weight_string, "weight")                                                   \
   V(windows_hide_string, "windowsHide")                                        \
   V(windows_verbatim_arguments_string, "windowsVerbatimArguments")             \
   V(wrap_string, "wrap")                                                       \
@@ -419,19 +377,26 @@
   V(write_queue_size_string, "writeQueueSize")
 
 #define PER_ISOLATE_TEMPLATE_PROPERTIES(V)                                     \
+  V(a_record_template, v8::DictionaryTemplate)                                 \
+  V(aaaa_record_template, v8::DictionaryTemplate)                              \
   V(async_wrap_ctor_template, v8::FunctionTemplate)                            \
   V(binding_data_default_template, v8::ObjectTemplate)                         \
   V(blob_constructor_template, v8::FunctionTemplate)                           \
   V(blob_reader_constructor_template, v8::FunctionTemplate)                    \
   V(blocklist_constructor_template, v8::FunctionTemplate)                      \
+  V(caa_record_template, v8::DictionaryTemplate)                               \
   V(callsite_template, v8::DictionaryTemplate)                                 \
+  V(cipherinfo_template, v8::DictionaryTemplate)                               \
+  V(cname_record_template, v8::DictionaryTemplate)                             \
   V(contextify_global_template, v8::ObjectTemplate)                            \
   V(contextify_wrapper_template, v8::ObjectTemplate)                           \
   V(cpu_usage_template, v8::DictionaryTemplate)                                \
   V(crypto_key_object_handle_constructor, v8::FunctionTemplate)                \
   V(env_proxy_template, v8::ObjectTemplate)                                    \
   V(env_proxy_ctor_template, v8::FunctionTemplate)                             \
+  V(ephemeral_key_template, v8::DictionaryTemplate)                            \
   V(dir_instance_template, v8::ObjectTemplate)                                 \
+  V(dns_ns_record_template, v8::DictionaryTemplate)                            \
   V(fd_constructor_template, v8::ObjectTemplate)                               \
   V(fdclose_constructor_template, v8::ObjectTemplate)                          \
   V(filehandlereadwrap_template, v8::ObjectTemplate)                           \
@@ -452,28 +417,38 @@
   V(lock_holder_constructor_template, v8::FunctionTemplate)                    \
   V(message_port_constructor_template, v8::FunctionTemplate)                   \
   V(module_wrap_constructor_template, v8::FunctionTemplate)                    \
+  V(mx_record_template, v8::DictionaryTemplate)                                \
+  V(naptr_record_template, v8::DictionaryTemplate)                             \
   V(object_stats_template, v8::DictionaryTemplate)                             \
   V(page_stats_template, v8::DictionaryTemplate)                               \
   V(pipe_constructor_template, v8::FunctionTemplate)                           \
   V(script_context_constructor_template, v8::FunctionTemplate)                 \
   V(secure_context_constructor_template, v8::FunctionTemplate)                 \
   V(shutdown_wrap_template, v8::ObjectTemplate)                                \
+  V(soa_record_template, v8::DictionaryTemplate)                               \
   V(socketaddress_constructor_template, v8::FunctionTemplate)                  \
   V(space_stats_template, v8::DictionaryTemplate)                              \
   V(sqlite_column_template, v8::DictionaryTemplate)                            \
   V(sqlite_statement_sync_constructor_template, v8::FunctionTemplate)          \
   V(sqlite_statement_sync_iterator_constructor_template, v8::FunctionTemplate) \
   V(sqlite_session_constructor_template, v8::FunctionTemplate)                 \
+  V(srv_record_template, v8::DictionaryTemplate)                               \
   V(streambaseoutputstream_constructor_template, v8::ObjectTemplate)           \
   V(tcp_constructor_template, v8::FunctionTemplate)                            \
+  V(tlsa_record_template, v8::DictionaryTemplate)                              \
   V(tty_constructor_template, v8::FunctionTemplate)                            \
+  V(txt_record_template, v8::DictionaryTemplate)                               \
+  V(urlpatterncomponentresult_template, v8::DictionaryTemplate)                \
+  V(urlpatterninit_template, v8::DictionaryTemplate)                           \
   V(urlpatternresult_template, v8::DictionaryTemplate)                         \
   V(write_wrap_template, v8::ObjectTemplate)                                   \
   V(worker_cpu_profile_taker_template, v8::ObjectTemplate)                     \
   V(worker_cpu_usage_taker_template, v8::ObjectTemplate)                       \
+  V(worker_heap_profile_taker_template, v8::ObjectTemplate)                    \
   V(worker_heap_snapshot_taker_template, v8::ObjectTemplate)                   \
   V(worker_heap_statistics_taker_template, v8::ObjectTemplate)                 \
-  V(x509_constructor_template, v8::FunctionTemplate)
+  V(x509_constructor_template, v8::FunctionTemplate)                           \
+  V(x509_dictionary_template, v8::DictionaryTemplate)
 
 #define PER_REALM_STRONG_PERSISTENT_VALUES(V)                                  \
   V(async_hooks_after_function, v8::Function)                                  \

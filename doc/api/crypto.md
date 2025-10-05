@@ -87,9 +87,9 @@ The following table lists the asymmetric key types recognized by the [`KeyObject
 | `'ml-dsa-44'`[^openssl35]          | ML-DSA-44          | 2.16.840.1.101.3.4.3.17 |
 | `'ml-dsa-65'`[^openssl35]          | ML-DSA-65          | 2.16.840.1.101.3.4.3.18 |
 | `'ml-dsa-87'`[^openssl35]          | ML-DSA-87          | 2.16.840.1.101.3.4.3.19 |
-| `'ml-kem-1024'`[^openssl35]        | ML-KEM-1024        | 2.16.840.1.101.3.4.4.3  |
 | `'ml-kem-512'`[^openssl35]         | ML-KEM-512         | 2.16.840.1.101.3.4.4.1  |
 | `'ml-kem-768'`[^openssl35]         | ML-KEM-768         | 2.16.840.1.101.3.4.4.2  |
+| `'ml-kem-1024'`[^openssl35]        | ML-KEM-1024        | 2.16.840.1.101.3.4.4.3  |
 | `'rsa-pss'`                        | RSA PSS            | 1.2.840.113549.1.1.10   |
 | `'rsa'`                            | RSA                | 1.2.840.113549.1.1.1    |
 | `'slh-dsa-sha2-128f'`[^openssl35]  | SLH-DSA-SHA2-128f  | 2.16.840.1.101.3.4.3.21 |
@@ -2970,6 +2970,26 @@ added:
 * Type: {Date}
 
 The date/time until which this certificate is valid, encapsulated in a `Date` object.
+
+### `x509.signatureAlgorithm`
+
+<!-- YAML
+added: v24.9.0
+-->
+
+* Type: {string|undefined}
+
+The algorithm used to sign the certificate or `undefined` if the signature algorithm is unknown by OpenSSL.
+
+### `x509.signatureAlgorithmOid`
+
+<!-- YAML
+added: v24.9.0
+-->
+
+* Type: {string}
+
+The OID of the algorithm used to sign the certificate.
 
 ### `x509.verify(publicKey)`
 
